@@ -1,0 +1,27 @@
+.u-color {
+    &-primary {
+        color: var(--color-primary);
+        --color-modifier: #{$color-primary};
+        --color-modifier: #{$color-body};
+    }
+
+    &-success {
+        --color-modifier: #{$color-success};
+        --accessible-color-modifier: #{$color-body}
+    }
+
+    &-information {
+        --color-modifier: #{$color-information};
+        --accessible-color-modifier: #{$color-light}
+    }
+
+    &-warning {
+        --color-modifier: #{$color-warning};
+        --accessible-color-modifier: #{$color-body}
+    }
+
+    &-danger {
+        --color-modifier: var(--color-danger);
+        --accessible-color-modifier: var(--color-dark);
+    }
+}

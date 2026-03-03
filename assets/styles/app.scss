@@ -1,0 +1,68 @@
+/* ITCSS structure
+ * Original post by Harry Roberts https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+*/
+
+/* 01. Settings */
+@import 'scss/01-settings/config';
+@import 'scss/01-settings/animations';
+@import 'scss/01-settings/breakpoints';
+@import 'scss/01-settings/colors';
+@import 'scss/01-settings/fonts';
+@import 'scss/01-settings/icons';
+@import 'scss/01-settings/layout';
+@import 'scss/01-settings/spacing';
+@import 'scss/01-settings/z-layers';
+
+/* 02. Tools */
+@import 'scss/02-tools/animations';
+@import 'scss/02-tools/clearfix';
+@import 'scss/02-tools/fonts';
+@import 'scss/02-tools/hidden';
+@import 'scss/02-tools/mq';
+@import 'scss/02-tools/on-event';
+@import 'scss/02-tools/placeholder';
+
+/* 03. Generic */
+@import 'scss/03-generic/normalize';
+@import 'scss/03-generic/print';
+
+/* 04. Elements */
+@import 'scss/04-elements/body';
+@import 'scss/04-elements/button';
+@import 'scss/04-elements/code';
+@import 'scss/04-elements/footer';
+@import 'scss/04-elements/form';
+@import 'scss/04-elements/header';
+@import 'scss/04-elements/heading';
+@import 'scss/04-elements/html';
+@import 'scss/04-elements/image';
+@import 'scss/04-elements/link';
+@import 'scss/04-elements/list';
+@import 'scss/04-elements/main';
+@import 'scss/04-elements/paragraphe';
+@import 'scss/04-elements/root';
+@import 'scss/04-elements/semantics';
+@import 'scss/04-elements/separator';
+@import 'scss/04-elements/table';
+
+/* 05. Layouts */
+@import 'scss/05-layout/container';
+@import 'scss/05-layout/layout';
+
+/* 06. Objects */
+@import 'scss/06-objects/footer';
+@import 'scss/06-objects/form';
+@import 'scss/06-objects/header';
+
+/* 07. Components */
+@import 'scss/07-components/icons';
+
+/* 09. Utilities */
+@import 'scss/09-utilities/aria';
+@import 'scss/09-utilities/clearfix';
+@import 'scss/09-utilities/colors';
+@import 'scss/09-utilities/flex';
+@import 'scss/09-utilities/link';
+@import 'scss/09-utilities/spacing';
+@import 'scss/09-utilities/text';
+@import 'scss/09-utilities/visibility';

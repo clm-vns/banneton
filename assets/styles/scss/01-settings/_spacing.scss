@@ -1,0 +1,66 @@
+/*
+ * 01. Settings - spacing.scss
+ *
+ * Spacing system on a default base of 8px
+ * You can use the $spacer-N directly on margin/padding property
+ *
+ * $margin-shortnames and $padding-shortnames allow to generate classes in the
+ * 09-utilities/spacing.scss you can use in HTML e.g.: u-margin-top-4
+ *
+ */
+
+@use "sass:map";
+
+$spacer-base: 8px;
+
+$spacer-0: $spacer-base * 0;
+$spacer-1: $spacer-base * 0.5;
+$spacer-2: $spacer-base;
+$spacer-3: $spacer-base * 1.5;
+$spacer-4: $spacer-base * 2;
+$spacer-5: $spacer-base * 3;
+$spacer-6: $spacer-base * 4;
+$spacer-7: $spacer-base * 5;
+$spacer-8: $spacer-base * 6;
+
+$spacer-9: $spacer-base * 8;
+$spacer-10: $spacer-base * 10;
+$spacer-11: $spacer-base * 12;
+$spacer-12: $spacer-base * 14;
+$spacer-13: $spacer-base * 16;
+$spacer-14: $spacer-base * 18;
+
+$spacers: $spacer-0,
+    $spacer-1,
+    $spacer-2,
+    $spacer-3,
+    $spacer-4,
+    $spacer-5,
+    $spacer-6,
+    $spacer-7,
+    $spacer-8,
+    $spacer-9,
+    $spacer-10,
+    $spacer-11,
+    $spacer-12,
+    $spacer-13,
+    $spacer-14;
+
+$margin-shortnames: (
+        'm': 'margin',
+        'mt': 'margin-top',
+        'ml': 'margin-left',
+        'mr': 'margin-right',
+        'mb': 'margin-bottom',
+);
+
+$padding-shortnames: (
+        'p': 'padding',
+        'pt': 'padding-top',
+        'pl': 'padding-left',
+        'pr': 'padding-right',
+        'pb': 'padding-bottom',
+);
+
+$spacer-shortnames: map.merge($margin-shortnames, $padding-shortnames);
+
