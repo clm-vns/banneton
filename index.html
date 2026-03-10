@@ -27,19 +27,25 @@
                             <p>Toutes les valeurs sont en grammes.</p>
                             <p class="o-form__field">
                                 <label for="flourBase">🌾 Farine :</label>
-                                <input class="o-form__field-input" type="number" name="flourBase" id="flourBase">
+                                <input class="o-form__field-input" type="number" name="flourBase" id="flourBase"
+                                       min="100">
                             </p>
                             <p class="o-form__field">
                                 <label for="waterBase">💧Eau :</label>
-                                <input class="o-form__field-input" type="number" name="waterBase" id="waterBase">
+                                <input class="o-form__field-input" type="number" name="waterBase" id="waterBase" min="100">
                             </p>
                             <p class="o-form__field">
                                 <label for="saltBase">🧂 Sel :</label>
-                                <input class="o-form__field-input" type="number" name="saltBase" id="saltBase">
+                                <input class="o-form__field-input" type="number" name="saltBase" id="saltBase" min="1">
+                            </p>
+                            <p class="o-form__field">
+                                <label for="seedsBase">🌻 Graines :</label>
+                                <input class="o-form__field-input" type="number" name="seedsBase" id="seedsBase" min="0">
                             </p>
                             <p class="o-form__field">
                                 <label for="sourdoughBase">Levain :</label>
-                                <input class="o-form__field-input" type="number" name="sourdoughBase" id="sourdoughBase">
+                                <input class="o-form__field-input" type="number" name="sourdoughBase"
+                                       id="sourdoughBase" min="10">
                             </p>
                             <p class="o-form__display">Poids total de la pâte : <span id="sumBase"></span> g.
                                 <br>Taux d'hydratation : <span id="hydrationRate"></span>%.
@@ -59,20 +65,25 @@
                             <br>Farine : <span id="flourRequired"></span> g
                             <br>Eau : <span id="waterRequired"></span> g
                             <br>Sel : <span id="saltRequired"></span> g
+                            <br>Graines : <span id="seedsRequired"></span> g
                             <br>Levain : <span id="sourdoughRequired"></span> g
                             <br>Poids total : <span id="sumRequired"></span> g
                         </p>
                     </div>
                 </div>
-                <input class="o-form__submit" type="submit" value="Calculer les quantités">
             </form>
             <hr class="u-margin-top-4 u-margin-bottom-4">
             <h2>Quelques explications</h2>
             <ol>
-                <li>Le taux d'hydratation est le rapport eau/farine, arrondi au dixième.</li>
+                <li>Le taux d'hydratation est le rapport eau/farine, arrondi au dixième. Les autres ingrédients
+                    sont considérés comme négligeables dans ce calcul.
+                </li>
                 <li>Le taux de levain est le rapport levain/poids total de la pâte, arrondi au dixième.</li>
                 <li>Le coefficient multiplicateur est arrondi au centième et les ingrédients sont arrondis à
                     l'unité. Cela provoque parfois un léger écart sur le poids total.
+                </li>
+                <li>Lors de la cuisson, l'évaporation est ~10%. Ainsi pour une baguette de 250g, le poids de la pâte
+                    doit d'être environ 270g
                 </li>
             </ol>
         </div>
