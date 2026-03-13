@@ -1,0 +1,8 @@
+main {
+    padding: $spacer-5 0;
+    background-color: $color-primary;
+
+    @include mq($from: mobile) {
+        padding: $spacer-4 $spacer-7 $spacer-2;
+    }
+}

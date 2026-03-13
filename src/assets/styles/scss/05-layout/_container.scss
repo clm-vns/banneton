@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #CONTAINER-OBJECT
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    padding-right: $container-gutter-width;
+    padding-left: $container-gutter-width;
+    max-width: $container-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

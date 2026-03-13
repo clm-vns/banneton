@@ -1,0 +1,29 @@
+.u-border {
+    border-style: solid;
+    border-color: var(--color-modifier, $color-dark);
+    border-width: 0;
+
+    &--top {
+        border-top-width: .1rem;
+    }
+
+    &--bottom {
+        border-bottom-width: .1rem;
+    }
+
+    &--left {
+        border-left-width: .1rem;
+    }
+
+    &--right {
+        border-right-width: .1rem;
+    }
+
+    &--y {
+        border-width: .1rem 0;
+    }
+
+    &--x {
+        border-width: 0 .1rem;
+    }
+}

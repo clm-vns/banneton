@@ -1,0 +1,126 @@
+form {
+    margin: $spacer-4 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    font-weight: 700;
+    margin: 0 0 $spacer-4;
+}
+
+label {
+    margin: $spacer-1 0;
+}
+
+input,
+textarea {
+    @include placeholder-color($color-body);
+    margin: 0 0 $spacer-4;
+    font-size: 1em;
+    letter-spacing: .12em;
+
+    @include on-event-accessible {
+        outline: max(2px, .15em) solid var(--color-modifier, currentColor);
+        outline-offset: max(2px, .15em);
+    }
+}
+
+textarea {
+    border: max(2px, 0.15em) solid $color-dark
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid $color-dark;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    @include basic-transition();
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: $color-light;
+    /* Not removed via appearance */
+    margin: 0 0 $spacer-4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: max(2px, .15em) solid $color-dark;
+    width: 1.1em;
+    height: 1.1em;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+
+    &:before {
+        content: "";
+        background-color: $color-light;
+        display: inline-block;
+        width: .6em;
+        height: .6em;
+        border-radius: 50%;
+    }
+
+    &:checked {
+        &:before {
+            transform: scale(1);
+            background-color: $color-dark;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    &::before {
+        font-family: $font-family-icons;
+        content: '\fb3e';
+        color: $color-light;
+    }
+
+    &:checked {
+        background-color: $color-dark;
+    }
+}
+
+input[type="file"] {
+    border-bottom: 0;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    width: fit-content;
+}
+
+select {
+    @include basic-transition();
+    display: inline-block;
+    margin: 0 0 $spacer-4;
+    padding: $spacer-1;
+    color: $color-dark;
+    background: transparent;
+    border: solid 2px $color-dark;
+    cursor: pointer;
+    outline-offset: calc($spacer-1 * 0.5);
+    letter-spacing: .12em;
+    line-height: inherit;
+
+    @include on-event {
+        color: $color-light;
+        background: $color-dark;
+    }
+
+    @include on-event-accessible {
+        outline: max(2px, .15em) solid $color-dark;
+        outline-offset: 2px;
+    }
+}

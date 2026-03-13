@@ -1,0 +1,38 @@
+a {
+    @include basic-transition();
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    outline-offset: calc($spacer-1 * 0.5);
+    cursor: pointer;
+    position: relative;
+    z-index: map-get($z-layers, body);
+
+    &:after {
+        @include basic-transition();
+        background: $color-dark;
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: map-get($z-layers, backdrop);
+    }
+
+    @include on-event {
+        color: $color-light;
+        &:after {
+            height: 100%;
+        }
+    }
+
+    @include on-event-accessible {
+        outline: max(2px, .15em) solid var(--color-modifier, $color-dark);
+        outline-offset: 2px;
+    }
+
+    @media screen {
+        color: inherit;
+    }
+}

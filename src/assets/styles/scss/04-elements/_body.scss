@@ -1,0 +1,13 @@
+/*
+ * 04. Elements - body.scss
+ */
+
+body {
+    font-family: $font-family-body;
+    font-size: $font-size-body;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-base;
+    color: var(--color-modifier, $color-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,98 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Banneton - Mon pain maison 🥖</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="Calculateur de coefficient multiplicateur pour la réalisation d'un bon pain au levain fait maison 🥖"/>
-    <script src="assets/js/app.min.js"></script>
-    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banneton - Mon pain maison 🥖</title>
+    <meta name="description" content="Calculateur de coefficient multiplicateur pour la réalisation d'un bon pain au levain fait maison 🥖"/>
+
 </head>
 <body>
-    <header class="o-header" role="header">
-        <div class="container">
-            <h1 class="u-margin-bottom-2">Banneton</h1>
-            <p>Mon compagnon pour la réalisation d'un bon pain au levain maison.</p>
-        </div>
-    </header>
-    <main role="main">
-        <div class="container">
-            <form id="recipeCalculator">
-                <div class="row">
-                    <div class="col-md-6">
-                        <fieldset class="o-form__fieldset">
-                            <legend>Recette de base</legend>
-                            <p>Toutes les valeurs sont en grammes.</p>
-                            <p class="o-form__field">
-                                <label for="flourBase">🌾 Farine :</label>
-                                <input class="o-form__field-input" type="number" name="flourBase" id="flourBase"
-                                       min="100">
-                            </p>
-                            <p class="o-form__field">
-                                <label for="waterBase">💧Eau :</label>
-                                <input class="o-form__field-input" type="number" name="waterBase" id="waterBase" min="100">
-                            </p>
-                            <p class="o-form__field">
-                                <label for="saltBase">🧂 Sel :</label>
-                                <input class="o-form__field-input" type="number" name="saltBase" id="saltBase" min="1">
-                            </p>
-                            <p class="o-form__field">
-                                <label for="seedsBase">🌻 Graines :</label>
-                                <input class="o-form__field-input" type="number" name="seedsBase" id="seedsBase" min="0">
-                            </p>
-                            <p class="o-form__field">
-                                <label for="sourdoughBase">Levain :</label>
-                                <input class="o-form__field-input" type="number" name="sourdoughBase"
-                                       id="sourdoughBase" min="10">
-                            </p>
-                            <p class="o-form__display">Poids total de la pâte : <span id="sumBase"></span> g.
-                                <br>Taux d'hydratation : <span id="hydrationRate"></span>%.
-                                <br>Taux de levain : <span id="sourdoughRate"></span>%.</p>
-                        </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                        <fieldset class="o-form__fieldset">
-                            <legend>Recette finale</legend>
-                            <p class="o-form__field">
-                                <label for="wanted">Poids de pâte souhaité :</label>
-                                <input class="o-form__field-input" type="number" name="wanted" id="wanted">
-                            </p>
-                        </fieldset>
-                        <p id="requiredDisplay" class="o-form__display">
-                            Coefficient multiplicateur : <span id="multiplier"></span>
-                            <br>Farine : <span id="flourRequired"></span> g
-                            <br>Eau : <span id="waterRequired"></span> g
-                            <br>Sel : <span id="saltRequired"></span> g
-                            <br>Graines : <span id="seedsRequired"></span> g
-                            <br>Levain : <span id="sourdoughRequired"></span> g
-                            <br>Poids total : <span id="sumRequired"></span> g
-                        </p>
-                    </div>
-                </div>
-            </form>
-            <hr class="u-margin-top-4 u-margin-bottom-4">
-            <h2>Quelques explications</h2>
-            <ol>
-                <li>Le taux d'hydratation est le rapport eau/farine, arrondi au dixième. Les autres ingrédients
-                    sont considérés comme négligeables dans ce calcul.
-                </li>
-                <li>Le taux de levain est le rapport levain/poids total de la pâte, arrondi au dixième.</li>
-                <li>Le coefficient multiplicateur est arrondi au centième et les ingrédients sont arrondis à
-                    l'unité. Cela provoque parfois un léger écart sur le poids total.
-                </li>
-                <li>Lors de la cuisson, l'évaporation est ~10%. Ainsi pour une baguette de 250g, le poids de la pâte
-                    doit d'être environ 270g
-                </li>
-            </ol>
-        </div>
-    </main>
-    <footer class="o-footer" role="contentinfo">
-        <div class="container">
-            &copy; 2026 <a class="o-footer__link" href="https://clm-vns.github.io/" target="_blank">Clément
-            Vernaison</a>
-        </div>
-    </footer>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

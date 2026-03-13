@@ -1,0 +1,42 @@
+.o-form {
+
+    &__field {
+        margin-bottom: $spacer-4;
+        padding: $spacer-1 $spacer-2;
+        border-radius: .5rem;
+    }
+
+    &__label {
+        padding-right: $spacer-2;
+        display: inline-block;
+
+        @include mq($from: smallmobile) {
+            width: max(256px, 50%);
+            text-align: right;
+        }
+
+        @include mq($from: mobile) {
+            width: initial;
+        }
+
+        @include mq($from: tablet) {
+            width: max(256px, 50%);
+        }
+    }
+
+    &__input {
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+        text-align: right;
+
+        @include mq($from: smallmobile) {
+            width: min($spacer-11, 50%);
+        }
+
+    }
+
+    &__submit {
+        border: 0;
+    }
+}

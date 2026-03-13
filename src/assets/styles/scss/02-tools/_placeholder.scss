@@ -1,0 +1,13 @@
+/*
+ * 02. Tools - placeholder.scss
+ */
+
+@mixin placeholder-color($color: $color-body) {
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder,
+    ::-ms-input-placeholder {
+        color: $color;
+    }
+}

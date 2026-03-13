@@ -1,0 +1,29 @@
+/*
+ * 03. Generic - print.scss
+ */
+
+@media print {
+    html,
+    body,
+    main,
+    .o-container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    h1 {
+        font-size: 18pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+    }
+
+    h3 {
+        font-size: 14pt;
+    }
+}

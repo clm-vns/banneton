@@ -1,0 +1,44 @@
+/*
+ * 01. Settings - colors.scss
+ *
+ * Colors used throughout the project
+ *
+ */
+
+$color-dark: #000000;
+$color-light: #ffffff;
+
+$color-blue: #718ad9;
+$color-red: #e79d88;
+$color-green: #a6cca4;
+$color-yellow: #febe5d;
+$color-gray: #d5d7d5;
+
+$color-gray-1: #222222;
+$color-gray-2: #545454;
+$color-gray-3: #8a8a8a;
+$color-gray-4: #e6e6e6;
+$color-gray-5: #f4f4f4;
+
+$color-primary: $color-yellow;
+$color-body: $color-gray-1;
+
+
+/* States color */
+$color-danger: $color-red;
+$color-success: $color-green;
+$color-warning: $color-yellow;
+$color-information: $color-blue;
+
+$colors-grid: (
+        light: "#ffffff",
+        dark: "#222222",
+        primary: "#90B69D",
+        secondary: "#6D98BA",
+        tertiary: "#D3B99F",
+        quaternary: "#C17767",
+        information: "#718ad9",
+        success: "#a6cca4",
+        warning: "#febe5d",
+        danger: "#e79d88",
+)

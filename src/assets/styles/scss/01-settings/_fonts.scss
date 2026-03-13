@@ -1,0 +1,30 @@
+/*
+ * 01. Settings - fonts.scss
+ *
+ * Font related constants
+ * Add your font file in the /fonts directory
+ *
+ */
+
+$font-family-body: 'Arial', 'sans-serif';
+$font-family-title: 'Arial', 'sans-serif';
+$font-family-icons: 'Icomoon';
+
+$font-size-base: 10px;
+$font-size-body: 1.8rem;
+$line-height-base: 1.5;
+$letter-spacing-base: 0.12em;
+
+$font-size-tiny: 12px !default;
+$font-size-small: 16px !default;
+$font-size-medium: 18px !default;
+$font-size-large: 20px !default;
+$font-size-huge: 28px !default;
+
+$font-size-grid: (
+    'xs': $font-size-tiny,
+    'sm': $font-size-small,
+    'md': $font-size-medium,
+    'lg': $font-size-large,
+    'xl': $font-size-huge
+);
