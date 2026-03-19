@@ -1,9 +1,0 @@
-@mixin make-colors($colors: $colors-grid) {
-    @each $color-name, $color in $colors {
-        --color-#{$color-name}: #{$color}
-    }
-}
-
-:root {
-    @include make-colors();
-}

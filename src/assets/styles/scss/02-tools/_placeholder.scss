@@ -3,11 +3,13 @@
  */
 
 @mixin placeholder-color($color: $color-body) {
+    ::placeholder
     ::-webkit-input-placeholder,
     :-moz-placeholder,
     ::-moz-placeholder,
     :-ms-input-placeholder,
     ::-ms-input-placeholder {
         color: $color;
+        opacity: 0.3;
     }
 }

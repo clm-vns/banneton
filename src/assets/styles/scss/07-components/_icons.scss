@@ -5,11 +5,12 @@
 // Utilisation dans le HTML : <i class="o-icon o-icon--facebook" aria-hidden="true"></i>
 
 .c-icon {
+    @include basic-transition();
 
     &::before {
+        @include basic-transition();
         font-family: $font-family-icons;
-        //Par défaut la couleur de l'icône est égale à la couleur du texte adjacent
-        color: currentColor;
+        color: var(--color-modifier, currentColor, $color-body);
         speak: never;
         font-style: normal;
         font-weight: normal;
@@ -19,7 +20,6 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         vertical-align: middle;
-        color: var(--color-modifier, $color-body);
     }
 
     @each $icon, $code in $icons {
@@ -61,10 +61,8 @@
     }
 
     &--background {
-        &::before {
-            padding: $spacer-1;
-            border-radius: 100%;
-        }
+        padding: $spacer-1;
+        border-radius: 0 1rem 1rem 0;
     }
 
 
@@ -72,7 +70,14 @@
         &::before {
             padding: $spacer-1;
             border: solid $color-body .2rem;
-            border-radius: 100%;
+            border-radius: 1rem;
+        }
+    }
+
+    @include on-event() {
+        background: var(--color-modifier, $color-body);
+        &::before {
+            color: $color-body
         }
     }
 }

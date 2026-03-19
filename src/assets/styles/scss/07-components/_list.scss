@@ -1,0 +1,12 @@
+.c-list {
+    &--no-bullet {
+        .c-list__item {
+            padding-left: 0;
+
+            &::before,
+            &::marker {
+                content: none;
+            }
+        }
+    }
+}

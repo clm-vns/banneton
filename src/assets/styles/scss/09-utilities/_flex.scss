@@ -30,4 +30,8 @@
     &__first {
         flex: 1;
     }
+
+    &__no-shrink {
+        flex-shrink: 0;
+    }
 }

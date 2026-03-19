@@ -12,15 +12,16 @@ a[type="button"] {
     margin: 0;
     color: $color-body;
     background: $color-light;
-    border: solid 2px var(--color-modifier, $color-body);
+    border: solid 1px $color-body;
+    border-radius: 1rem;
+    box-shadow: 0 0 .4rem rgba(0, 0, 0, .2);;
     cursor: pointer;
     outline-offset: calc($spacer-1 * 0.5);
     letter-spacing: .12em;
     line-height: inherit;
 
     @include on-event {
-        color: var(--accessible-color-modifier, $color-light);
-        background: var(--color-modifier, $color-body);
+        box-shadow: 0 0 1.8rem rgba(0, 0, 0, .2);;
     }
 
     @include on-event-accessible {

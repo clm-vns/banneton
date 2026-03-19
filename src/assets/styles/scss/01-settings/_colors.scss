@@ -5,11 +5,11 @@
  *
  */
 
-$color-dark: #000000;
 $color-light: #ffffff;
+$color-dark: #000000;
 
 $color-blue: #718ad9;
-$color-red: #e79d88;
+$color-red: #D55734;
 $color-green: #a6cca4;
 $color-yellow: #febe5d;
 $color-gray: #d5d7d5;
@@ -31,14 +31,11 @@ $color-warning: $color-yellow;
 $color-information: $color-blue;
 
 $colors-grid: (
-        light: "#ffffff",
-        dark: "#222222",
-        primary: "#90B69D",
-        secondary: "#6D98BA",
-        tertiary: "#D3B99F",
-        quaternary: "#C17767",
-        information: "#718ad9",
-        success: "#a6cca4",
-        warning: "#febe5d",
-        danger: "#e79d88",
+        light: $color-light,
+        dark: $color-dark,
+        primary: $color-primary,
+        information: $color-information,
+        success: $color-green,
+        warning: $color-warning,
+        danger: $color-danger,
 )

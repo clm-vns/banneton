@@ -3,4 +3,22 @@
     border-radius: .5em;
     padding: $spacer-4;
     box-shadow: 0 0 .8rem rgba(0, 0, 0, .4);;
+
+    &__result {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer-4;
+
+        @include mq($from: smallmobile) {
+            flex-direction: row;
+        }
+
+        @include mq($from: mobile) {
+            flex-direction: column;
+        }
+
+        @include mq($from: tablet) {
+            flex-direction: row;
+        }
+    }
 }

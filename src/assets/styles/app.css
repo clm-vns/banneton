@@ -511,7 +511,9 @@ a[type=button] {
   margin: 0;
   color: #222222;
   background: #ffffff;
-  border: solid 2px var(--color-modifier, #222222);
+  border: solid 1px #222222;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline-offset: 2px;
   letter-spacing: 0.12em;
@@ -530,8 +532,7 @@ a[type=button]:hover,
 a[type=button]:active,
 a[type=button]:focus,
 a[type=button]:focus-visible {
-  color: var(--accessible-color-modifier, #ffffff);
-  background: var(--color-modifier, #222222);
+  box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.2);
 }
 button:active, button:focus, button:focus-visible,
 input[type=submit]:active,
@@ -595,17 +596,18 @@ label {
   margin: 4px 0;
 }
 
-input ::-webkit-input-placeholder,
+input ::placeholder ::-webkit-input-placeholder,
 input :-moz-placeholder,
 input ::-moz-placeholder,
 input :-ms-input-placeholder,
 input ::-ms-input-placeholder,
-textarea ::-webkit-input-placeholder,
+textarea ::placeholder ::-webkit-input-placeholder,
 textarea :-moz-placeholder,
 textarea ::-moz-placeholder,
 textarea :-ms-input-placeholder,
 textarea ::-ms-input-placeholder {
   color: #222222;
+  opacity: 0.3;
 }
 input,
 textarea {
@@ -628,6 +630,7 @@ textarea {
 input {
   border: none;
   border-bottom: 1px solid #000000;
+  width: 100%;
 }
 
 input[type=radio],
@@ -892,15 +895,12 @@ p {
 
 :root {
   --color-light: #ffffff ;
-  --color-dark: #222222 ;
-  --color-primary: #90B69D ;
-  --color-secondary: #6D98BA ;
-  --color-tertiary: #D3B99F ;
-  --color-quaternary: #C17767 ;
+  --color-dark: #000000 ;
+  --color-primary: #febe5d ;
   --color-information: #718ad9 ;
   --color-success: #a6cca4 ;
   --color-warning: #febe5d ;
-  --color-danger: #e79d88 ;
+  --color-danger: #D55734 ;
 }
 
 em {
@@ -1549,11 +1549,35 @@ td, th {
   padding: 16px;
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.4);
 }
+.o-recipe-calculator__result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 35.9375em) {
+  .o-recipe-calculator__result {
+    flex-direction: row;
+  }
+}
+@media (min-width: 47.9375em) {
+  .o-recipe-calculator__result {
+    flex-direction: column;
+  }
+}
+@media (min-width: 64em) {
+  .o-recipe-calculator__result {
+    flex-direction: row;
+  }
+}
 
 /* 07. Components */
+.c-icon {
+  transition: all 400ms ease-out;
+}
 .c-icon::before {
+  transition: all 400ms ease-out;
   font-family: "Icomoon";
-  color: currentColor;
+  color: var(--color-modifier, currentColor, #222222);
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -1563,7 +1587,6 @@ td, th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
-  color: var(--color-modifier, #222222);
 }
 .c-icon--arrow-down::before {
   content: "𐁱";
@@ -1622,14 +1645,20 @@ td, th {
 .c-icon--big {
   font-size: 1.6em;
 }
-.c-icon--background::before {
+.c-icon--background {
   padding: 4px;
-  border-radius: 100%;
+  border-radius: 0 1rem 1rem 0;
 }
 .c-icon--bordered::before {
   padding: 4px;
   border: solid #222222 0.2rem;
-  border-radius: 100%;
+  border-radius: 1rem;
+}
+.c-icon:hover, .c-icon:active, .c-icon:focus, .c-icon:focus-visible {
+  background: var(--color-modifier, #222222);
+}
+.c-icon:hover::before, .c-icon:active::before, .c-icon:focus::before, .c-icon:focus-visible::before {
+  color: #222222;
 }
 
 /* Utilisation dans le HTML :
@@ -1651,6 +1680,13 @@ td, th {
 }
 .has-icon--right .c-icon {
   margin-left: 8px;
+}
+
+.c-list--no-bullet .c-list__item {
+  padding-left: 0;
+}
+.c-list--no-bullet .c-list__item::before, .c-list--no-bullet .c-list__item::marker {
+  content: none;
 }
 
 /* 09. Utilities */
@@ -1797,6 +1833,9 @@ td, th {
 .u-flex__first {
   flex: 1;
 }
+.u-flex__no-shrink {
+  flex-shrink: 0;
+}
 
 .u-cover::before {
   content: "";
@@ -1851,7 +1890,7 @@ td, th {
   margin-top: auto;
 }
 
-.u-margine-left-auto {
+.u-margin-left-auto {
   margin-left: auto;
 }
 
